@@ -1,0 +1,28 @@
+#!/bin/tcsh
+
+# Instructions for new Lightningsmp Cluster users:
+#  To use this script:
+#   1) Save this script as a file named myscript on Lightningsmp.its
+#   2) On lightningsmp, Issue                   
+#       qsub myscript    to submit the job 
+#        Use qstat -a to see job status, 
+#         Use qdel jobname to delete one of your jobs
+#         jobnames are of the form 1234.hpc4smp 
+
+###########################################
+# Output goes to file BATCH_OUTPUT.
+# Error output goes to file BATCH_ERRORS.
+# If you want the output to go to another file, change BATCH_OUTPUT 
+# or BATCH_ERRORS in the following lines to the full path of that file. 
+
+#PBS  -o BATCH_OUTPUT_TRY
+#PBS  -e BATCH_ERRORS_TRY
+
+#PBS -lvmem=64GB,pmem=16Gb,mem=128Gb,nodes=2:ppn=16:ib,cput=8:00:00,walltime=1:00:00
+
+# Change to directory from which qsub command was issued 
+   cd $PBS_O_WORKDIR
+#  mpirun -np 12 main4processor
+setenv LD_LIBRARY_PATH   /usr/local/lib:/home/bigs/lib  
+echo $PBS_JOBID
+mpirun --bynode -np 8 BayesC
