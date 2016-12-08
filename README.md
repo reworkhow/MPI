@@ -77,9 +77,9 @@ Each processor has its own cache
 
 ###### Why 10M obsevations and 500 markers linear scaling, but the 10M observations and 50k markers only get 1/4?
 
-cache ![Hao_node_sketch](media/9610052363_c38e09c335_o.png)
+cache 
 
-<img src="media/9610052363_c38e09c335_o.png" alt="alt text" width="whatever" height="whatever">
+<img src="media/9610052363_c38e09c335_o.png" alt="alt text" width="512" height="512">
 
 #### Compiling
 
