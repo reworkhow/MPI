@@ -79,6 +79,8 @@ Each processor has its own cache
 
 cache ![Hao_node_sketch](media/9610052363_c38e09c335_o.png)
 
+<img src="media/9610052363_c38e09c335_o.png" alt="alt text" width="whatever" height="whatever">
+
 #### Compiling
 
 * mpicxx for C++
